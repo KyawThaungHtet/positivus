@@ -1,0 +1,145 @@
+/* Base styles for mobile */
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+  }
+  
+  .space-grotesk-bold-700 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-grotesk-light {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .container img {
+    width: 100%; /* Change to percentage */
+    max-width: 400px; /* Maintain a max-width */
+    height: auto;
+    object-fit: contain;
+  }
+    
+  .navbar-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-container .main-logo {
+    width: 144px;
+  }
+  
+  .navbar-container .menu-icon {
+    width: 24px;
+    height: auto;
+  }
+  
+  .mega-title {
+    font-size: 44px;
+    text-shadow: 2px 2px 8px #959595;
+  }
+  
+  .container p {
+    font-size: 16px;
+  }
+  
+  .container button {
+    background-color: #191A23;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .container .information {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .container .information .title {
+    background-color: #B9FF66;
+    text-align: center;
+    padding: 0px 6px;
+    border-radius: 8px;
+  }
+  
+  .container div {
+    padding: 20px 0px;
+  }
+  
+  .container .information p {
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid #191A23;
+    border-radius: 25px;
+    min-height: 150px;
+    border-bottom: 5px solid;
+    padding: 20px 50px;
+    display: flex;
+    align-items: start; 
+    flex-direction: column;
+  }
+  
+  .card .card-title{
+    background-color: #B9FF66;
+    border-radius: 4px;
+    text-align: left;
+    padding: 0px 3px;
+    font-weight: 200;
+  }
+  
+  .card div {
+    padding: 0px 10px;
+    margin: 0px;
+  }
+  
+  .card .card-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-bottom: 15px;
+  }
+  
+  .card .card-content .card-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Media query for tablets */
+  @media (min-width: 600px) {
+    .container {
+      width: 80%;
+      padding: 20px;
+    }
+  }
+  
+  /* Media query for desktops */
+  @media (min-width: 1024px) {
+    .container {
+      width: 60%;
+      padding: 30px;
+    }
+  }
+    
