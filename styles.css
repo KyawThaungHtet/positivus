@@ -26,6 +26,10 @@ html, body, * {
     padding: 10px;
   }
   
+  .container > div {
+    padding: 20px;
+  }
+
   .container img {
     width: 100%; /* Change to percentage */
     max-width: 400px; /* Maintain a max-width */
@@ -51,6 +55,7 @@ html, body, * {
   .mega-title {
     font-size: 44px;
     text-shadow: 2px 2px 8px #959595;
+    padding: 0px !important;
   }
   
   .container p {
@@ -80,13 +85,16 @@ html, body, * {
     padding: 0px 6px;
     border-radius: 8px;
   }
-  
-  .container div {
-    padding: 20px 0px;
-  }
+
   
   .container .information p {
     text-align: center;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
   }
   
   .card {
@@ -108,7 +116,7 @@ html, body, * {
     font-weight: 200;
   }
   
-  .card div {
+  .card {
     padding: 0px 10px;
     margin: 0px;
   }
@@ -123,10 +131,68 @@ html, body, * {
   
   .card .card-content .card-arrow {
     position: absolute;
+    width: 42px;
     bottom: 0;
     left: 0;
   }
+
+  .container .info-card {
+    background-color: #F3F3F3;
+    border: none;
+    border-radius: 25px;
+    padding: 30px;
+  }
+
+  .container .info-card div {
+    padding: 10px 0px;
+  }
+
+  .scrollable-cards {
+    max-width: 100%; /* Ensure the section does not exceed the viewport width */
+    overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .green-bg-title {
+    background-color: #B9FF66;
+    display: inline-block;
+    padding: 0px 6px !important;
+    border-radius: 8px;
+    align-self: center; 
+  }
+
+  .scrollable-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Optional: for snapping effect */
+    padding: 0; /* Remove padding to avoid extra space */
+  }
   
+  .scrollable-cards-::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .scrollable-card {
+    flex: 0 0 auto; /* Ensure the cards do not shrink */
+    width: 400px; /* Set a fixed width for the cards */
+    margin: 10px; /* Optional: add some space between cards */
+    background-color: #191A23;
+    border-radius: 25px;
+    margin: 20px;
+    color: white;
+    padding: 30px !important;
+    min-width: 400px;
+    scroll-snap-align: start;
+  }
+
+  .scrollable-card .link {
+    color: #B9FF66;
+    padding-top: 20px;
+  }
+
   /* Media query for tablets */
   @media (min-width: 600px) {
     .container {
@@ -138,8 +204,14 @@ html, body, * {
   /* Media query for desktops */
   @media (min-width: 1024px) {
     .container {
-      width: 60%;
+      width: 80%;
       padding: 30px;
+      margin: auto;
+    }
+
+    .card-container {
+      grid-template-columns: auto auto;
+      gap: 40px;
     }
   }
     
